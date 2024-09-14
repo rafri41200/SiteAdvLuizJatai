@@ -1,0 +1,729 @@
+/*configurações gerais do site*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}/*Reset*/
+body{
+  background-color: #1c1c1c;
+  
+}
+
+a:visited,link{
+  color: white;
+}
+a{
+  text-decoration: none;
+}
+
+.flex{
+  display: flex;
+}
+
+html{
+  scroll-behavior: smooth;
+}/*para o scroll down*/
+
+
+/*
+HERO DO SITE
+*/
+
+.hero-site{
+  height: auto;
+  width: 100%;
+  background-color: blue;
+  overflow: hidden;
+  
+  
+}
+
+.img-hero {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.flex{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 100;
+  flex-direction: column;
+  text-align: center;
+  
+  
+}
+
+.logo img{
+  width: 200px;
+}
+
+.txt-hero{
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2%;
+  
+}
+
+.txt-hero h2{
+  font-size: 35px;
+  color: white;
+  padding: 15px;
+}
+
+.txt-hero p{
+  font-size: 25px;
+  color: white;
+  
+}
+
+.txt-hero span{
+  color: #d39f54;
+}
+
+.button{
+  background-color: #d39f54;
+  display: flex;
+  height: 60px;
+  max-width: 400px;
+  border-radius: 30px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Adicione essa linha */
+}
+
+a.button{
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #d39f54;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a.button:hover {
+  box-shadow: 0 0 8px #d39f54;
+  transform: scale(1.1); /* Adicione essa linha */
+}
+
+
+/* Sessão Casos Comuns */
+.cases {
+  border-top: 1px solid transparent;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #1c1c1c;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cases h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative; /* Para permitir a posição absoluta da linha */
+  display: inline-block;
+}
+
+.cases h1::after {
+  content: '';
+  display: block;
+  width: 200px; /* Largura da linha */
+  height: 3px; /* Altura da linha */
+  background-color: #d39f54; /* Cor dourada */
+  margin: 10px auto 0; /* Espaçamento acima e centralização horizontal */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.case-item {
+  background-color: #333;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.case-item:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.case-item .arrow {
+  display: block;
+  font-size: 2rem;
+  color: #d39f54;
+  margin-bottom: 10px;
+}
+
+.case-item p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.botao-chamada{
+  display: flex;
+  margin: 40px auto;
+  justify-content: center;
+  max-width: 400px;
+}
+
+section.cases .button{
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Seção Respiro */
+.respiro {
+    background-color: #000; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 1500px;
+    width: 100%;
+    background-image: url("../image/back-respiro.png");
+}
+
+.respiro .container {
+  position: relative;
+  z-index: 2;
+  margin: 50px auto; /* Centraliza o conteúdo */
+  margin-bottom: 100px;
+  background-image: url("../image/back-respiro1.png");
+  max-width: 1000px;
+  height: 500px;
+  border-radius: 20px;
+  border: 2px solid #b88943;
+  box-shadow: 0 0 15px #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
+  text-align: center;  
+}
+
+
+
+.respiro .atendimento {
+    font-size: 1rem;
+    color: #d39f54; /* Cor dourada */
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.respiro h2 {
+  font-family: "Baskervville SC", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.respiro p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.respiro .button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #d39f54; /* Cor do botão */
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.respiro .button:hover {
+  transform: scale(1.05);
+  
+}
+
+.txt-respiro{
+  max-width: 500px ;
+  padding: 3%;
+}
+
+/*Sobre mim*/
+
+.sobre-mim{
+  margin: 80px auto;
+  justify-content: center;
+  
+  
+}
+
+.sobre-mim h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative; /* Para permitir a posição absoluta da linha */
+  display: inline-block;
+}
+
+.sobre-mim h1::after {
+  content: '';
+  display: block;
+  width: 200px; /* Largura da linha */
+  height: 3px; /* Altura da linha */
+  background-color: #d39f54; /* Cor dourada */
+  margin: 10px auto 0; /* Espaçamento acima e centralização horizontal */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-sobre-mim img{
+  width: 400px;
+  height: 600px;
+  border-radius: 0 50% 0 50%;
+}
+
+.interface{
+  
+  padding: 4%;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.txt-sobre-mim{
+  text-align: justify;
+  padding: 4%;
+}
+
+.txt-sobre-mim p{
+  font-size: 20px;
+}
+
+.txt-sobre-mim h1::after {
+  content: '';
+  display: block;
+  width: 200px; /* Largura da linha */
+  height: 3px; /* Altura da linha */
+  background-color: #fff; /* Cor dourada */
+  margin: 10px auto 0; /* Espaçamento acima e centralização horizontal */
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+}
+
+
+
+/*depoimentos*/
+
+.title-depoimentos{
+  margin: 20px auto;
+  text-align: center;
+}
+
+.title-depoimentos h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative; /* Para permitir a posição absoluta da linha */
+  display: inline-block;
+
+}
+
+.title-depoimentos h1::after {
+  content: '';
+  display: block;
+  width: 200px; /* Largura da linha */
+  height: 3px; /* Altura da linha */
+  background-color: #d39f54; /* Cor dourada */
+  margin: 10px auto 0; /* Espaçamento acima e centralização horizontal */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+section.depoimentos{
+  width: 100%;
+  height: auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:  20px auto;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+section.depoimentos {
+  height: 50vh; /* Reduzir a altura do container */
+  padding: 10px 15px; /* Ajuste do padding */
+}
+
+
+
+
+.slide-depoimentos{
+  background-color: #fff;
+  padding: 20px 30px;
+}
+
+.depoimentos .slide-depoimentos{
+  padding: 10px 60px;
+  cursor: grab;
+}
+
+.depoimentos .slide-depoimentos:active{
+  cursor: grabbing;
+}
+
+
+.slide-depoimentos .person{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slide-depoimentos .person img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.depoimentos i{
+  font-size: 35px;
+  color: #4285F4; /* Cor azul do Google */
+  margin-bottom: 15px;
+}
+
+.depoimentos p.depoi-txt{
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.slide-depoimentos p.nome-person{
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+.slide-depoimentos p.func-person{
+  font-size: 14px;
+}
+
+.swiper-button-next, .swiper-button-prev, .swiper-pagination {
+  color: #4285F4;
+}
+
+.swiper-button-next {
+  right: 10px; /* Posiciona o botão 'next' à direita */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Posiciona o botão 'prev' à esquerda */
+}
+
+.google-rating {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+   /* Espaço entre o ícone do Google e as estrelas */
+}
+
+.star-rating .material-icons {
+  font-size: 24px; /* Tamanho das estrelas */
+  color: #FFD700; /* Cor dourada das estrelas */
+}
+
+@media screen and (max-width: 768px) {
+  .nov-btn {
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+  .nav-btn1{
+    visibility: hidden;
+  }
+}
+
+
+/*footer e btn whats*/
+
+footer{
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+  
+
+
+
+.mapa {
+  border: 2px solid #b88943;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px 20px 0 0;
+  border: 0;
+  padding: 10px;
+}
+
+.botao-footer button:hover{
+  box-shadow: 0px 0px 8px #d39f54;
+  transform: scale(1.05);
+}
+
+.botao-footer button{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d39f54;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: .2s;
+  color: #fff;
+}
+
+.txt-footer{
+  color: #fff;
+  margin: 35px auto;
+  text-align: center;
+  
+}
+
+.txt-footer img{
+  width: 150px;
+}
+
+.botao-rafa{
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.botao-rafa img{
+  transition: .2s;
+}
+
+.botao-rafa img:hover{
+  transform: scale(1.05);
+}
+
+footer .logo-footer img{
+  width: 150px;
+  margin-top: 20px;
+}
+
+
+/*RESPONSIVIDADE*/
+
+/*SESSÃO HERO*/
+/* Responsividade para telas menores */
+@media (max-width: 850px) {
+  .hero-site {
+    height: auto;
+  }
+
+  .flex {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .txt-hero h2 {
+    font-size: 25px;
+  }
+
+  .txt-hero p {
+    font-size: 18px;
+  }
+
+  .button {
+    height: 50px;
+    width: 300px;
+  }
+
+  a.button {
+    font-size: 20px;
+  }
+
+  section.cases .button{
+    font-size: 15px;
+  }
+
+  .respiro .button{
+    font-size: 13px;
+    width: 280px;
+  }
+
+  /*Sobre mim*/
+
+  .interface {
+    flex-direction: column-reverse;
+    padding: 2%;
+  }
+
+  .img-sobre-mim img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+  }
+
+  .txt-sobre-mim {
+    padding: 2%;
+    text-align: center;
+  }
+
+  .sobre-mim h1 {
+    font-size: 2rem;
+  }
+
+  .txt-sobre-mim p {
+    font-size: 18px;
+  }
+
+  .txt-sobre-mim h1::after {
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .respiro{
+    height: auto;
+  }
+
+  /*sliders*/
+
+  .slide-depoimentos .person img {
+    width: 40px; /* Reduz o tamanho da imagem da pessoa */
+    height: 40px;
+  }
+
+  .depoimentos i {
+    font-size: 30px; /* Ajusta o tamanho do ícone do Google */
+    margin-bottom: 10px;
+  }
+
+  .depoimentos p.depoi-txt {
+    font-size: 14px; /* Reduz o tamanho do texto do depoimento */
+    margin-bottom: 20px;
+  }
+
+  .slide-depoimentos p.nome-person {
+    font-size: 14px; /* Ajusta o tamanho do nome da pessoa */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .flex {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .txt-hero h2 {
+    font-size: 30px;
+  }
+
+  .txt-hero p {
+    font-size: 19px;
+  }
+
+  .button {
+    height: 50px;
+    width: 300px;
+  }
+
+  a.button {
+    font-size: 20px;
+  }
+
+  /*sobre mim*/
+  .txt-sobre-mim p {
+    font-size: 16px;
+  }
+
+  .sobre-mim h1 {
+    font-size: 1.8rem;
+  }
+
+  .txt-sobre-mim h1::after {
+    width: 100px;
+  }
+
+
+}
+
+
+
+
+
+/*SESSÃO CASOS COMUNS*/
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
